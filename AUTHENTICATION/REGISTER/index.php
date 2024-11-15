@@ -20,23 +20,26 @@ if (isset($_POST['register'])) {
     $values['username'] = mysqli_real_escape_string($conn, $_POST['username']);
     $values['email'] = mysqli_real_escape_string($conn, $_POST['email']);
     $values['phoneNumber'] = mysqli_real_escape_string($conn, $_POST['phoneNumber']);
-    $values['profilePicture'] = mysqli_real_escape_string($conn, $_POST['profilePicture']);
     $values['password'] = mysqli_real_escape_string($conn, $_POST['password']);
     $values['verifyPassword'] = mysqli_real_escape_string($conn, $_POST['verifyPassword']);
-
-    // Initialize an empty SQL query string
-    $sqlQuery = '';
+    $values['profilePicture'] = '';
 
     // Initialize the picture
-    $targetDir = "images/";
+    $targetDir = "../../uploads/";
     $fileName = basename($_FILES["profilePicture"]["name"]);
     $targetFilePath = $targetDir . $fileName;
-    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-    if (move_uploaded_file($_FILES["profilePicture"]["tmp_name"], $targetFilePath)) {
-        $values['profilePicture'] = $targetFilePath;
+
+    // Check if a file was uploaded
+    if (isset($_FILES["profilePicture"]) && $_FILES["profilePicture"]["error"] == UPLOAD_ERR_OK) {
+        // Check if the file upload is successful
+        if (move_uploaded_file($_FILES["profilePicture"]["tmp_name"], $targetFilePath)) {
+            $values['profilePicture'] = $targetFilePath;
+        } else {
+            $flagVariable = true;
+            $error = 'Sorry, there was an error uploading your file.';
+        }
     } else {
-        $flagVariable = true;
-        $error = 'Sorry, there was an error uploading your file.';
+        $values['profilePicture'] = 'https://picsum.photos/200?grayscale';
     }
 
     // Check if the password is valid (at least 8 characters, contains uppercase, lowercase, and numbers)
@@ -56,33 +59,39 @@ if (isset($_POST['register'])) {
         // Hash the password using bcrypt
         $hashedPassword = password_hash($values['password'], PASSWORD_BCRYPT);
 
-        // Construct the SQL query based on the user input values
-        if ($values['profilePicture'] == '') {
-            $sqlQuery = "INSERT INTO users(`username`,`email`,`phone_no`, `password`) VALUES('{$values['username']}', '{$values['email']}', '{$values['phoneNumber']}', '{$hashedPassword}')";
-        } elseif ($values["phoneNumber"] == '') {
-            $sqlQuery = "INSERT INTO users(`username`,`email`,`user_image`, `password`) VALUES('{$values['username']}', '{$values['email']}', '{$values['profilePicture']}', '{$hashedPassword}')";
+        // Prepare the SQL statement
+        $sqlQuery = "INSERT INTO users(`username`, `email`, `phone_no`, `user_image`, `password`) VALUES (?, ?, ?, ?, ?)";
+        $stmt = mysqli_prepare($conn, $sqlQuery);
+
+        // Check if the statement was prepared successfully
+        if ($stmt) {
+            // Bind parameters to the prepared statement
+            mysqli_stmt_bind_param($stmt, 'sssss', $values['username'], $values['email'], $values['phoneNumber'], $values['profilePicture'], $hashedPassword);
+
+            // Execute the statement
+            if (mysqli_stmt_execute($stmt)) {
+                // Get the user ID from the last inserted ID
+                $id = mysqli_insert_id($conn);
+
+                // Start a new session
+                session_start();
+
+                // Set session variables
+                $_SESSION['isLoggedIn'] = 'true';
+                $_SESSION['role'] = 'user';
+                $_SESSION['userId'] = $id;
+
+                // Redirect the user to the homepage
+                header("Location: http://localhost/php_projects/house-hold-supermarket/");
+                exit(0);
+            } else {
+                $error = 'Error: ' . mysqli_stmt_error($stmt);
+            }
+
+            // Close the statement
+            mysqli_stmt_close($stmt);
         } else {
-            $sqlQuery = "INSERT INTO users(`username`,`email`,`phone_no`,`user_image`, `password`) VALUES('{$values['username']}', '{$values['email']}', '{$values['phoneNumber']}', '{$values['profilePicture']}', '{$hashedPassword}')";
-        }
-
-        // Execute the SQL query
-        if (mysqli_query($conn, $sqlQuery)) {
-            // Get the user ID from the last inserted ID
-            $id = mysqli_insert_id($conn);
-
-            // Start a new session
-            session_start();
-
-            // Set session variables
-            $_SESSION['isLoggedIn'] = 'true';
-            $_SESSION['role'] = 'user';
-            $_SESSION['userId'] = $id;
-
-            // Redirect the user to the homepage
-            header("Location: http://localhost/php_projects/house-hold-supermarket/");
-            exit(0);
-        } else {
-            $error = 'Error: ' . mysqli_error($conn);
+            $error = 'Error preparing statement: ' . mysqli_error($conn);
         }
     }
 }
@@ -99,37 +108,47 @@ if (isset($_POST['register'])) {
 
 <body>
     <?php include '../../TEMPLATES/header.php'; ?>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="col s12" enctype="multipart/form-data" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" required>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="col s12" enctype="multipart/form-data" style="position:absolute;top:calc(50% + 65px);left:50%;transform:translate(-50%,-50%);">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="username" type="text" name="username" placeholder="Username:" required>
+            </div>
         </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" required>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" type="email" name="email" placeholder="Email:" required>
+            </div>
         </div>
-        <div>
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="text" name="phoneNumber" required>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Phone Number:" required>
+            </div>
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" required>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" name="password" placeholder="Password:" required>
+            </div>
         </div>
-        <div>
-            <label for="verifyPassword">Verify Password:</label>
-            <input type="password" name="verifyPassword" required>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="verifyPassword" type="password" name="verifyPassword" placeholder="Verify Password:" required>
+            </div>
         </div>
-        <div>
-            <label for="profilePicture">Profile Picture:</label>
-            <input type="file" name="profilePicture" accept="image/*" required>
+        <div class="row">
+            <div class="input-field col s12">
+                <span>Profile Picture:</span>
+                <input type="file" name="profilePicture" accept="image/*" required>
+            </div>
         </div>
-        <div>
-            <input type="submit" name="register" value="Register">
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="submit" name="register" value="Register" class="btn">
+            </div>
         </div>
         <?php if (!empty($error)): ?>
             <div style="color: red;"><?php echo htmlspecialchars($error); ?></div>
         <?php endif; ?>
+    </form>
     </form>
 </body>
 

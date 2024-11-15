@@ -729,3 +729,192 @@ Here are some best practices to follow when using Git:
 - Use `git status` and `git log` to keep track of changes in your repository.
 - Use `git remote` to manage remote repositories.
 - Use `git push` and `git pull` to upload and download changes from remote repositories.
+
+# MySQL Cheat Sheet
+=====================
+
+## Table of Contents
+
+1. [SQL Basics](#sql-basics)
+2. [Data Types](#data-types)
+3. [SQL Queries](#sql-queries)
+4. [Table Management](#table-management)
+5. [Indexing](#indexing)
+6. [Constraints](#constraints)
+7. [Views](#views)
+8. [Stored Procedures](#stored-procedures)
+9. [Functions](#functions)
+10. [Triggers](#triggers)
+11. [Error Handling](#error-handling)
+12. [Security](#security)
+
+## SQL Basics
+------------
+
+### SQL Syntax
+
+* SQL statements are case-insensitive
+* SQL statements end with a semicolon (`;`)
+* SQL statements can be written in multiple lines
+
+### SQL Data Types
+
+* `INT`: whole numbers
+* `DECIMAL`: decimal numbers
+* `VARCHAR`: character strings
+* `DATE`: dates
+* `TIME`: times
+* `TIMESTAMP`: timestamps
+
+## Data Types
+-------------
+
+### Numeric Data Types
+
+* `INT`: whole numbers
+* `DECIMAL`: decimal numbers
+* `FLOAT`: floating-point numbers
+* `DOUBLE`: double-precision floating-point numbers
+
+### String Data Types
+
+* `VARCHAR`: character strings
+* `CHAR`: fixed-length character strings
+* `TEXT`: large character strings
+* `BLOB`: binary large objects
+
+### Date and Time Data Types
+
+* `DATE`: dates
+* `TIME`: times
+* `TIMESTAMP`: timestamps
+* `DATETIME`: dates and times
+
+## SQL Queries
+-------------
+
+### SELECT Statement
+
+* `SELECT * FROM table_name;`: selects all columns from a table
+* `SELECT column1, column2 FROM table_name;`: selects specific columns from a table
+* `SELECT * FROM table_name WHERE condition;`: selects rows from a table based on a condition
+
+### INSERT Statement
+
+* `INSERT INTO table_name (column1, column2) VALUES ('value1', 'value2');`: inserts a new row into a table
+
+### UPDATE Statement
+
+* `UPDATE table_name SET column1 = 'value1', column2 = 'value2' WHERE condition;`: updates rows in a table based on a condition
+
+### DELETE Statement
+
+* `DELETE FROM table_name WHERE condition;`: deletes rows from a table based on a condition
+
+## Table Management
+-----------------
+
+### CREATE TABLE Statement
+
+* `CREATE TABLE table_name (column1 data_type, column2 data_type);`: creates a new table
+
+### ALTER TABLE Statement
+
+* `ALTER TABLE table_name ADD column3 data_type;`: adds a new column to a table
+* `ALTER TABLE table_name DROP COLUMN column2;`: drops a column from a table
+
+### DROP TABLE Statement
+
+* `DROP TABLE table_name;`: drops a table
+
+## Indexing
+------------
+
+### CREATE INDEX Statement
+
+* `CREATE INDEX index_name ON table_name (column1, column2);`: creates a new index on a table
+
+### DROP INDEX Statement
+
+* `DROP INDEX index_name ON table_name;`: drops an index from a table
+
+## Constraints
+-------------
+
+### PRIMARY KEY Constraint
+
+* `CREATE TABLE table_name (column1 data_type PRIMARY KEY);`: creates a primary key constraint on a table
+
+### FOREIGN KEY Constraint
+
+* `CREATE TABLE table_name (column1 data_type, FOREIGN KEY (column1) REFERENCES parent_table (parent_column));`: creates a foreign key constraint on a table
+
+### UNIQUE Constraint
+
+* `CREATE TABLE table_name (column1 data_type UNIQUE);`: creates a unique constraint on a table
+
+### CHECK Constraint
+
+* `CREATE TABLE table_name (column1 data_type CHECK (condition));`: creates a check constraint on a table
+
+## Views
+---------
+
+### CREATE VIEW Statement
+
+* `CREATE VIEW view_name AS SELECT * FROM table_name;`: creates a new view
+
+### DROP VIEW Statement
+
+* `DROP VIEW view_name;`: drops a view
+
+## Stored Procedures
+-----------------
+
+### CREATE PROCEDURE Statement
+
+* `CREATE PROCEDURE procedure_name (parameter1 data_type, parameter2 data_type) BEGIN SELECT * FROM table_name; END;`: creates a new stored procedure
+
+### DROP PROCEDURE Statement
+
+* `DROP PROCEDURE procedure_name;`: drops a stored procedure
+
+## Functions
+------------
+
+### CREATE FUNCTION Statement
+
+* `CREATE FUNCTION function_name (parameter1 data_type, parameter2 data_type) RETURNS data_type BEGIN RETURN expression; END;`: creates a new function
+
+### DROP FUNCTION Statement
+
+* `DROP FUNCTION function_name;`: drops a function
+
+## Triggers
+------------
+
+### CREATE TRIGGER Statement
+
+* `CREATE TRIGGER trigger_name BEFORE/AFTER INSERT/UPDATE/DELETE ON table_name FOR EACH ROW BEGIN SET NEW.column1 = 'value1'; END;`: creates a new trigger
+
+### DROP TRIGGER Statement
+
+* `DROP TRIGGER trigger_name;`: drops a trigger
+
+## Error Handling
+----------------
+
+### TRY-CATCH Block
+
+* `BEGIN TRY SELECT * FROM table_name; END TRY BEGIN CATCH SELECT 'Error occurred'; END CATCH;`: handles errors in a SQL statement
+
+## Security
+------------
+
+### GRANT Statement
+
+* `GRANT SELECT, INSERT, UPDATE, DELETE ON table_name TO 'username'@'hostname';`: grants privileges to a user
+
+### REVOKE Statement
+
+* `REVOKE SELECT, INSERT, UPDATE, DELETE ON table_name FROM 'username'@'hostname';`: revokes privileges from a user
