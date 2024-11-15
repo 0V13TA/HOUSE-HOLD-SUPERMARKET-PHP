@@ -1,16 +1,16 @@
 <?php
 session_start();
 
-if ($_SERVER['PHP_SELF'] == 'http://localhost/php_projects/house-hold-supermarket/admin') {
-    $_SESSION["role"] = "admin";
-    $_SESSION["id"] = null;
-    $_SESSION["isLoggedIn"] = 'false';
-} else {
-    $_SESSION["role"] = "user";
-    $_SESSION["id"] = null;
-    $_SESSION["isLoggedIn"] = 'false';
+// Initialize session variables if they are not set
+if (!isset($_SESSION['role'])) {
+    $_SESSION['role'] = 'user'; // Default role
 }
-
+if (!isset($_SESSION['id'])) {
+    $_SESSION['id'] = null; // Default id
+}
+if (!isset($_SESSION['isLoggedIn'])) {
+    $_SESSION['isLoggedIn'] = 'false'; // Default login status
+}
 ?>
 <link rel="stylesheet" href="http://localhost/php_projects/house-hold-supermarket/dist/materialize.css">
 <nav class="navbar" style="position: sticky; top: 0; z-index: 1000;">
