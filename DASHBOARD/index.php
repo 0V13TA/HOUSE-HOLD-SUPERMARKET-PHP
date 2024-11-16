@@ -49,7 +49,7 @@ $fileName = strtoupper($fileName);
     ?>
     <div class="dashboard-container">
         <div class="profile-section">
-            <img src="<?php echo $userData['profile_picture']; ?>" alt="Profile Picture" class="circle responsive-img profile-picture">
+            <img src="<?php echo $userData['user_image']; ?>" alt="Profile Picture" class="circle responsive-img profile-picture">
             <h2><?php echo $userData['username']; ?></h2>
         </div>
         <div class="dashboard-links">
@@ -63,7 +63,7 @@ $fileName = strtoupper($fileName);
         <div class="dashboard-info">
             <h3>Account Information</h3>
             <p>Email: <?php echo $userData['email']; ?></p>
-            <p>Phone Number: <?php echo $userData['phone_number']; ?></p>
+            <p>Phone Number: <?php echo $userData['phone_no']; ?></p>
             <p>Address: <?php echo $userData['address']; ?></p>
         </div>
         <div class="dashboard-actions">

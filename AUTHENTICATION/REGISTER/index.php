@@ -1,4 +1,3 @@
-```php
 <?php
 // Get the current file name and convert it to uppercase
 $pathsArray = explode("/", $_SERVER['SCRIPT_FILENAME']);
@@ -29,6 +28,7 @@ if (isset($_POST['register'])) {
     $values['password'] = mysqli_real_escape_string($conn, $_POST['password']);
     $values['verifyPassword'] = mysqli_real_escape_string($conn, $_POST['verifyPassword']);
     $values['profilePicture'] = '';
+    $values['address'] = mysqli_real_escape_string($conn, $_POST['address']);
 
     // Initialize the picture
     $targetDir = "../../uploads/";
@@ -66,13 +66,13 @@ if (isset($_POST['register'])) {
         $hashedPassword = password_hash($values['password'], PASSWORD_BCRYPT);
 
         // Prepare the SQL statement
-        $sqlQuery = "INSERT INTO users(`username`, `email`, `phone_no`, `user_image`, `password`) VALUES (?, ?, ?, ?, ?)";
+        $sqlQuery = "INSERT INTO users(`username`, `email`, `phone_no`, `address`, `user_image`, `password`) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sqlQuery);
 
         // Check if the statement was prepared successfully
         if ($stmt) {
             // Bind parameters to the prepared statement
-            mysqli_stmt_bind_param($stmt, 'sssss', $values['username'], $values['email'], $values['phoneNumber'], $values['profilePicture'], $hashedPassword);
+            mysqli_stmt_bind_param($stmt, 'ssssss', $values['username'], $values['email'], $values['phoneNumber'], $values['address'], $values['profilePicture'], $hashedPassword);
 
             // Execute the statement
             if (mysqli_stmt_execute($stmt)) {
@@ -122,27 +122,26 @@ function validatePassword($password)
     <?php include '../../TEMPLATES/header.php'; ?>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="col s12" enctype="multipart/form-data" style="position:absolute;top:calc(50% + 65px);left:50%;transform:translate(-50%,-50%);">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <input id="username" type="text" name="username" placeholder="Username:" required>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <input id="email" type="email" name="email" placeholder="Email:" required>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Phone Number:" required>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" type="password" name="password" placeholder="Password:" required>
+            <div class="input-field col s6">
+                <input id="address" type="text" name="address" placeholder="Address:" required>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
+                <input id="password" type="password" name="password" placeholder="Password:" required>
+            </div>
+            <div class="input-field col s6">
                 <input id="verifyPassword" type="password" name="verifyPassword" placeholder="Verify Password:" required>
             </div>
         </div>
