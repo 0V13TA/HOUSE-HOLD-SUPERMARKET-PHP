@@ -1,3 +1,4 @@
+```php
 <?php
 // Get the current file name and convert it to uppercase
 $pathsArray = explode("/", $_SERVER['SCRIPT_FILENAME']);
@@ -5,7 +6,12 @@ $fileName = $pathsArray[count($pathsArray) - 2];
 $fileName = strtoupper($fileName);
 
 // Initialize an array to store user input values
-$values = ['username' => '', 'email' => '', 'phoneNumber' => '', 'profilePicture' => ''];
+$values = [
+    'username' => '',
+    'email' => '',
+    'phoneNumber' => '',
+    'profilePicture' => ''
+];
 
 // Initialize a flag variable to track errors
 $flagVariable = false;
@@ -26,14 +32,14 @@ if (isset($_POST['register'])) {
 
     // Initialize the picture
     $targetDir = "../../uploads/";
-    $fileName = basename($_FILES["profilePicture"]["name"]);
-    $targetFilePath = $targetDir . $fileName;
+    $pictureName = basename($_FILES["profilePicture"]["name"]);
+    $targetFilePath = $targetDir . $pictureName;
 
     // Check if a file was uploaded
     if (isset($_FILES["profilePicture"]) && $_FILES["profilePicture"]["error"] == UPLOAD_ERR_OK) {
         // Check if the file upload is successful
         if (move_uploaded_file($_FILES["profilePicture"]["tmp_name"], $targetFilePath)) {
-            $values['profilePicture'] = $targetFilePath;
+            $values['profilePicture'] = 'http://' . $_SERVER['SERVER_NAME'] . str_ireplace('authentication/register/index.php', '', $_SERVER['REQUEST_URI']) . "uploads/" . $pictureName;
         } else {
             $flagVariable = true;
             $error = 'Sorry, there was an error uploading your file.';
@@ -42,8 +48,8 @@ if (isset($_POST['register'])) {
         $values['profilePicture'] = 'https://picsum.photos/200?grayscale';
     }
 
-    // Check if the password is valid (at least 8 characters, contains uppercase, lowercase, and numbers)
-    if (strlen($values['password']) < 8 || !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*$/', $values['password'])) {
+    // Validate password
+    if (!validatePassword($values['password'])) {
         $flagVariable = true;
         $error = 'Sorry, Password must not be less than 8 characters and must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number.';
     }
@@ -95,6 +101,12 @@ if (isset($_POST['register'])) {
         }
     }
 }
+
+// Function to validate password
+function validatePassword($password)
+{
+    return strlen($password) >= 8 && preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*$/', $password);
+}
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +115,7 @@ if (isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo "$fileName | HHS";  ?></title>
+    <title><?php echo "$fileName | HHS"; ?></title>
 </head>
 
 <body>
@@ -148,7 +160,6 @@ if (isset($_POST['register'])) {
         <?php if (!empty($error)): ?>
             <div style="color: red;"><?php echo htmlspecialchars($error); ?></div>
         <?php endif; ?>
-    </form>
     </form>
 </body>
 

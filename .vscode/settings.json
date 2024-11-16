@@ -1,4 +1,10 @@
 {
   "shiftleft-core.slHomePath": "C:\\Users\\User/.shiftleft",
-  "cSpell.words": ["Cloudinary", "SOVIETA"]
+  "cSpell.words": [
+    "autoloader",
+    "Cloudinary",
+    "phpmailer",
+    "SOVIETA",
+    "STARTTLS"
+  ]
 }

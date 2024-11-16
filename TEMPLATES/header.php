@@ -5,8 +5,8 @@ session_start();
 if (!isset($_SESSION['role'])) {
     $_SESSION['role'] = 'user'; // Default role
 }
-if (!isset($_SESSION['id'])) {
-    $_SESSION['id'] = null; // Default id
+if (!isset($_SESSION['userId'])) {
+    $_SESSION['userId'] = null; // Default id
 }
 if (!isset($_SESSION['isLoggedIn'])) {
     $_SESSION['isLoggedIn'] = 'false'; // Default login status

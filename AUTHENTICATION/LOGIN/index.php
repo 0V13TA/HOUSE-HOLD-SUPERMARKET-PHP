@@ -5,7 +5,7 @@ $fileName = $pathsArray[count($pathsArray) - 2];
 $fileName = strtoupper($fileName);
 
 // Initialize variables for user input and error handling
-$userInput = ['email' => '', 'password' => ''];
+$userInput = ['username' => '', 'password' => ''];
 $isError = false;
 $errorMessage = '';
 
@@ -15,13 +15,13 @@ if (isset($_POST['submit'])) {
     include '../../CONFIG/mysql_connection.php';
 
     // Sanitize user input to prevent SQL injection
-    $userInput['email'] = mysqli_real_escape_string($conn, $_POST['email']);
+    $userInput['username'] = mysqli_real_escape_string($conn, $_POST['username']);
     $userInput['password'] = mysqli_real_escape_string($conn, $_POST['password']);
 
-    // Prepare a SQL query to retrieve user data
-    $sqlQuery = "SELECT email, password, status FROM users WHERE email = ?";
+    // Prepare a SQL que ry to retrieve user data
+    $sqlQuery = "SELECT *  FROM users WHERE username = ?";
     $stmt = mysqli_prepare($conn, $sqlQuery);
-    mysqli_stmt_bind_param($stmt, "s", $userInput['email']);
+    mysqli_stmt_bind_param($stmt, "s", $userInput['username']);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     $userData = mysqli_fetch_assoc($result);
@@ -43,9 +43,9 @@ if (isset($_POST['submit'])) {
         session_start();
 
         // Set session variables
+        $_SESSION['userId'] = $userData['id']; // Use the actual user ID from the database
         $_SESSION['isLoggedIn'] = 'true';
         $_SESSION['role'] = $userData['status'];
-        $_SESSION['userId'] = $userData['id']; // Use the actual user ID from the database
 
         // Redirect the user to the homepage
         header("Location: http://localhost/php_projects/house-hold-supermarket/");
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
                         <span class="card-title">Login</span>
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                             <div class="input-field col s12">
-                                <input name="email" type="email" class="validate" placeholder="Email" required>
+                                <input name="username" type="text" class="validate" placeholder="Email" required>
                             </div>
                             <div class="input-field col s12">
                                 <input name="password" type="password" class="validate" placeholder="Password" required>
