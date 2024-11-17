@@ -32,7 +32,6 @@ $fileName = strtoupper($fileName);
      * Include the MySQL connection configuration.
      */
     include '../CONFIG/mysql_connection.php';
-
     /**
      * Prepare a SQL query to retrieve user data based on the user ID.
      */
@@ -49,30 +48,26 @@ $fileName = strtoupper($fileName);
     ?>
     <div class="dashboard-container">
         <div class="profile-section">
-            <img src="<?php echo $userData['user_image']; ?>" alt="Profile Picture" class="circle responsive-img profile-picture">
-            <h2><?php echo $userData['username']; ?></h2>
+            <img src="<?php echo $userData['user_image']; ?>" alt="Profile Picture" class="circle responsive-img profile-picture" style="width: 150px; height: 150px; object-fit: cover;">
+            <h2 style="font-size: 24px; margin-top: 10px;"><?php echo $userData['username']; ?></h2>
         </div>
-        <div class="dashboard-links">
-            <a href="receipts.php">View Receipts</a>
-            <a href="order-history.php">Order History</a>
-            <a href="account-settings.php">Account Settings</a>
-            <a href="wishlist.php">Wishlist</a>
-            <a href="coupons.php">Coupons</a>
-            <a href="loyalty-program.php">Loyalty Program</a>
+        <div class="dashboard-links" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <a href="receipts.php" class="dashboard-link">View Receipts</a>
+            <a href="wishlist.php" class="dashboard-link">Wishlist</a>
         </div>
         <div class="dashboard-info">
-            <h3>Account Information</h3>
-            <p>Email: <?php echo $userData['email']; ?></p>
-            <p>Phone Number: <?php echo $userData['phone_no']; ?></p>
-            <p>Address: <?php echo $userData['address']; ?></p>
+            <h3 style="font-size: 20px;">Account Information</h3>
+            <p style="font-size: 16px;">Email: <?php echo $userData['email']; ?></p>
+            <p style="font-size: 16px;">Phone Number: <?php echo $userData['phone_no']; ?></p>
+            <p style="font-size: 16px;">Address: <?php echo $userData['address']; ?></p>
         </div>
-        <div class="dashboard-actions">
-            <button class="btn waves-effect waves-light">Edit Profile</button>
-            <button class="btn waves-effect waves-light">Change Password</button>
-            <button class="btn waves-effect waves-light">Logout</button>
+        <div class="dashboard-actions" style="display: flex; justify-content: space-around;">
+            <a href="../AUTHENTICATION/EDIT_PROFILE/"><button class="btn waves-effect waves-light">Edit Profile</button></a>
+            <a href="../AUTHENTICATION/CHANGE_PASSWORD/">
+                <button class="btn waves-effect waves-light">Change Password</button></a>
         </div>
         <div class="dashboard-notifications">
-            <h3>Notifications</h3>
+            <h3 style="font-size: 20px;">Notifications</h3>
             <ul class="collection">
                 <li class="collection-item">New order placed!</li>
                 <li class="collection-item">Order shipped!</li>
@@ -80,41 +75,56 @@ $fileName = strtoupper($fileName);
             </ul>
         </div>
         <div class="dashboard-recommendations">
-            <h3>Recommended Products</h3>
+            <h3 style="font-size: 20px;">Recommended Products</h3>
             <div class="row">
                 <div class="col s12 m6 l4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="product1.jpg" alt="Product 1">
+                            <img src="product1.jpg" alt="Product 1" style="width: 100%; height: 200px; object-fit: cover;">
                         </div>
                         <div class="card-content">
-                            <p>Product 1</p>
+                            <p style="font-size: 16px;">Product 1</p>
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="product2.jpg" alt="Product 2">
+                            <img src="product2.jpg" alt="Product 2" style="width: 100%; height: 200px; object-fit: cover;">
                         </div>
                         <div class="card-content">
-                            <p>Product 2</p>
+                            <p style="font-size: 16px;">Product 2</p>
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="product3.jpg" alt="Product 3">
+                            <img src="product3.jpg" alt="Product 3" style="width: 100%; height: 200px; object-fit: cover;">
                         </div>
                         <div class="card-content">
-                            <p>Product 3</p>
+                            <p style="font-size: 16px;">Product 3</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <style>
+        .dashboard-link {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dashboard-link:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </body>
 
 </html>
