@@ -3,882 +3,882 @@
     "category": "Kitchen Equipment",
     "name": "Refrigerator",
     "quantity_in_stock": 10,
-    "price": 500,
+    "price_naira": 500,
     "image": "https://cdn.pixabay.com/photo/2015/06/08/15/10/refrigerator-802288_960_720.jpg"
   },
   {
     "category": "Kitchen Equipment",
     "name": "Oven",
     "quantity_in_stock": 8,
-    "price": 300,
+    "price_naira": 300,
     "image": "https://cdn.pixabay.com/photo/2016/09/29/05/24/oven-1706297_960_720.jpg"
   },
   {
     "category": "Kitchen Equipment",
     "name": "Stove",
     "quantity_in_stock": 15,
-    "price": 200,
+    "price_naira": 200,
     "image": "https://cdn.pixabay.com/photo/2017/03/17/19/43/oven-2157319_960_720.jpg"
   },
   {
     "category": "Kitchen Equipment",
     "name": "Microwave",
     "quantity_in_stock": 20,
-    "price": 100,
+    "price_naira": 100,
     "image": "https://cdn.pixabay.com/photo/2015/06/02/14/44/microwave-794658_960_720.jpg"
   },
   {
     "category": "Kitchen Equipment",
     "name": "Dishwasher",
     "quantity_in_stock": 5,
-    "price": 400,
+    "price_naira": 400,
     "image": "https://cdn.pixabay.com/photo/2017/11/16/11/13/dishwasher-2953630_960_720.jpg"
   },
   {
     "category": "Kitchen Equipment",
     "name": "Blender",
     "quantity_in_stock": 25,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Toaster",
     "quantity_in_stock": 30,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Coffee Maker",
     "quantity_in_stock": 18,
-    "price": 60,
-    "image": "image_url"
+    "price_naira": 60,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Stand Mixer",
     "quantity_in_stock": 12,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Hand Mixer",
     "quantity_in_stock": 22,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Food Processor",
     "quantity_in_stock": 10,
-    "price": 120,
-    "image": "image_url"
+    "price_naira": 120,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Slow Cooker",
     "quantity_in_stock": 15,
-    "price": 80,
-    "image": "image_url"
+    "price_naira": 80,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Electric Kettle",
     "quantity_in_stock": 35,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Rice Cooker",
     "quantity_in_stock": 18,
-    "price": 60,
-    "image": "image_url"
+    "price_naira": 60,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Panini Press",
     "quantity_in_stock": 10,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Waffle Maker",
     "quantity_in_stock": 12,
-    "price": 40,
-    "image": "image_url"
+    "price_naira": 40,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Ice Cream Maker",
     "quantity_in_stock": 8,
-    "price": 70,
-    "image": "image_url"
+    "price_naira": 70,
+    "image": null
   },
   {
     "category": "Kitchen Equipment",
     "name": "Bread Machine",
     "quantity_in_stock": 6,
-    "price": 90,
-    "image": "image_url"
+    "price_naira": 90,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Washing Machine",
     "quantity_in_stock": 10,
-    "price": 500,
-    "image": "image_url"
+    "price_naira": 500,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Dryer",
     "quantity_in_stock": 8,
-    "price": 400,
-    "image": "image_url"
+    "price_naira": 400,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Iron",
     "quantity_in_stock": 20,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Ironing Board",
     "quantity_in_stock": 15,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Steamer",
     "quantity_in_stock": 12,
-    "price": 60,
-    "image": "image_url"
+    "price_naira": 60,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Fabric Shaver",
     "quantity_in_stock": 25,
-    "price": 20,
-    "image": "image_url"
+    "price_naira": 20,
+    "image": null
   },
   {
     "category": "Laundry Equipment",
     "name": "Lint Roller",
     "quantity_in_stock": 50,
-    "price": 5,
-    "image": "image_url"
+    "price_naira": 5,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Vacuum Cleaner",
     "quantity_in_stock": 10,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Mop",
     "quantity_in_stock": 25,
-    "price": 15,
-    "image": "image_url"
+    "price_naira": 15,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Broom",
     "quantity_in_stock": 30,
-    "price": 10,
-    "image": "image_url"
+    "price_naira": 10,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Dustpan",
     "quantity_in_stock": 35,
-    "price": 5,
-    "image": "image_url"
+    "price_naira": 5,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Cleaning Cart",
     "quantity_in_stock": 8,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Duster",
     "quantity_in_stock": 25,
-    "price": 8,
-    "image": "image_url"
+    "price_naira": 8,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Feather Duster",
     "quantity_in_stock": 20,
-    "price": 12,
-    "image": "image_url"
+    "price_naira": 12,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Sponges",
     "quantity_in_stock": 50,
-    "price": 2,
-    "image": "image_url"
+    "price_naira": 2,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Scouring Pads",
     "quantity_in_stock": 45,
-    "price": 3,
-    "image": "image_url"
+    "price_naira": 3,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Cleaning Cloths",
     "quantity_in_stock": 40,
-    "price": 7,
-    "image": "image_url"
+    "price_naira": 7,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Microfiber Cloths",
     "quantity_in_stock": 30,
-    "price": 10,
-    "image": "image_url"
+    "price_naira": 10,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Steam Cleaner",
     "quantity_in_stock": 10,
-    "price": 200,
-    "image": "image_url"
+    "price_naira": 200,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Carpet Cleaner",
     "quantity_in_stock": 5,
-    "price": 300,
-    "image": "image_url"
+    "price_naira": 300,
+    "image": null
   },
   {
     "category": "Cleaning Equipment",
     "name": "Upholstery Cleaner",
     "quantity_in_stock": 6,
-    "price": 120,
-    "image": "image_url"
+    "price_naira": 120,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Shower",
     "quantity_in_stock": 10,
-    "price": 800,
-    "image": "image_url"
+    "price_naira": 800,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Bathtub",
     "quantity_in_stock": 5,
-    "price": 700,
-    "image": "image_url"
+    "price_naira": 700,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Sink",
     "quantity_in_stock": 20,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Toilet",
     "quantity_in_stock": 15,
-    "price": 200,
-    "image": "image_url"
+    "price_naira": 200,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Bidet",
     "quantity_in_stock": 12,
-    "price": 250,
-    "image": "image_url"
+    "price_naira": 250,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Hair Dryer",
     "quantity_in_stock": 30,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Curling Iron",
     "quantity_in_stock": 25,
-    "price": 40,
-    "image": "image_url"
+    "price_naira": 40,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Flat Iron",
     "quantity_in_stock": 20,
-    "price": 45,
-    "image": "image_url"
+    "price_naira": 45,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Shaver",
     "quantity_in_stock": 18,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Bathroom Scales",
     "quantity_in_stock": 25,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Bathroom Equipment",
     "name": "Bathroom Heater",
     "quantity_in_stock": 10,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Bed",
     "quantity_in_stock": 5,
-    "price": 1000,
-    "image": "image_url"
+    "price_naira": 1000,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Mattress",
     "quantity_in_stock": 10,
-    "price": 500,
-    "image": "image_url"
+    "price_naira": 500,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Bed Frame",
     "quantity_in_stock": 8,
-    "price": 300,
-    "image": "image_url"
+    "price_naira": 300,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Dresser",
     "quantity_in_stock": 6,
-    "price": 400,
-    "image": "image_url"
+    "price_naira": 400,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Nightstand",
     "quantity_in_stock": 12,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Closet Organizer",
     "quantity_in_stock": 10,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Hangers",
     "quantity_in_stock": 100,
-    "price": 1,
-    "image": "image_url"
+    "price_naira": 1,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Alarm Clock",
     "quantity_in_stock": 20,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Radio",
     "quantity_in_stock": 15,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "TV",
     "quantity_in_stock": 8,
-    "price": 600,
-    "image": "image_url"
+    "price_naira": 600,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Computer",
     "quantity_in_stock": 5,
-    "price": 1000,
-    "image": "image_url"
+    "price_naira": 1000,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Desk Lamp",
     "quantity_in_stock": 20,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Bedroom Equipment",
     "name": "Floor Lamp",
     "quantity_in_stock": 12,
-    "price": 75,
-    "image": "image_url"
+    "price_naira": 75,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Sofa",
     "quantity_in_stock": 8,
-    "price": 800,
-    "image": "image_url"
+    "price_naira": 800,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Armchair",
     "quantity_in_stock": 10,
-    "price": 300,
-    "image": "image_url"
+    "price_naira": 300,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Coffee Table",
     "quantity_in_stock": 12,
-    "price": 200,
-    "image": "image_url"
+    "price_naira": 200,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "End Table",
     "quantity_in_stock": 15,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "TV Stand",
     "quantity_in_stock": 10,
-    "price": 250,
-    "image": "image_url"
+    "price_naira": 250,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "TV",
     "quantity_in_stock": 8,
-    "price": 600,
-    "image": "image_url"
+    "price_naira": 600,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Sound System",
     "quantity_in_stock": 5,
-    "price": 300,
-    "image": "image_url"
+    "price_naira": 300,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "DVD Player",
     "quantity_in_stock": 12,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Gaming Console",
     "quantity_in_stock": 6,
-    "price": 400,
-    "image": "image_url"
+    "price_naira": 400,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Rug",
     "quantity_in_stock": 20,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Curtains",
     "quantity_in_stock": 15,
-    "price": 80,
-    "image": "image_url"
+    "price_naira": 80,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Blinds",
     "quantity_in_stock": 18,
-    "price": 60,
-    "image": "image_url"
+    "price_naira": 60,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Lamp",
     "quantity_in_stock": 25,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Living Room Equipment",
     "name": "Ceiling Fan",
     "quantity_in_stock": 10,
-    "price": 120,
-    "image": "image_url"
+    "price_naira": 120,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Lawn Mower",
     "quantity_in_stock": 8,
-    "price": 400,
-    "image": "image_url"
+    "price_naira": 400,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Trimmer",
     "quantity_in_stock": 10,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Pruning Shears",
     "quantity_in_stock": 15,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Rake",
     "quantity_in_stock": 20,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Hoe",
     "quantity_in_stock": 18,
-    "price": 20,
-    "image": "image_url"
+    "price_naira": 20,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Shovel",
     "quantity_in_stock": 12,
-    "price": 40,
-    "image": "image_url"
+    "price_naira": 40,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Trowel",
     "quantity_in_stock": 25,
-    "price": 10,
-    "image": "image_url"
+    "price_naira": 10,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Watering Can",
     "quantity_in_stock": 30,
-    "price": 15,
-    "image": "image_url"
+    "price_naira": 15,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Hose",
     "quantity_in_stock": 15,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Sprinkler",
     "quantity_in_stock": 10,
-    "price": 75,
-    "image": "image_url"
+    "price_naira": 75,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Patio Furniture",
     "quantity_in_stock": 5,
-    "price": 500,
-    "image": "image_url"
+    "price_naira": 500,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "BBQ Grill",
     "quantity_in_stock": 8,
-    "price": 300,
-    "image": "image_url"
+    "price_naira": 300,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Outdoor Heater",
     "quantity_in_stock": 4,
-    "price": 200,
-    "image": "image_url"
+    "price_naira": 200,
+    "image": null
   },
   {
     "category": "Outdoor Equipment",
     "name": "Outdoor Fan",
     "quantity_in_stock": 10,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Smoke Detector",
     "quantity_in_stock": 20,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Carbon Monoxide Detector",
     "quantity_in_stock": 15,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Fire Extinguisher",
     "quantity_in_stock": 10,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "First Aid Kit",
     "quantity_in_stock": 30,
-    "price": 20,
-    "image": "image_url"
+    "price_naira": 20,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Emergency Phone",
     "quantity_in_stock": 5,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Flashlight",
     "quantity_in_stock": 40,
-    "price": 15,
-    "image": "image_url"
+    "price_naira": 15,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Battery-Powered Radio",
     "quantity_in_stock": 10,
-    "price": 35,
-    "image": "image_url"
+    "price_naira": 35,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Whistle",
     "quantity_in_stock": 50,
-    "price": 5,
-    "image": "image_url"
+    "price_naira": 5,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Fire Alarm",
     "quantity_in_stock": 15,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Safety Equipment",
     "name": "Security System",
     "quantity_in_stock": 5,
-    "price": 500,
-    "image": "image_url"
+    "price_naira": 500,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Hammer",
     "quantity_in_stock": 25,
-    "price": 20,
-    "image": "image_url"
+    "price_naira": 20,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Screwdriver",
     "quantity_in_stock": 30,
-    "price": 10,
-    "image": "image_url"
+    "price_naira": 10,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Pliers",
     "quantity_in_stock": 20,
-    "price": 15,
-    "image": "image_url"
+    "price_naira": 15,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Wrench",
     "quantity_in_stock": 15,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Tape Measure",
     "quantity_in_stock": 30,
-    "price": 12,
-    "image": "image_url"
+    "price_naira": 12,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Level",
     "quantity_in_stock": 18,
-    "price": 20,
-    "image": "image_url"
+    "price_naira": 20,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Drill",
     "quantity_in_stock": 10,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Saw",
     "quantity_in_stock": 12,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Sandpaper",
     "quantity_in_stock": 50,
-    "price": 5,
-    "image": "image_url"
+    "price_naira": 5,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Paintbrush",
     "quantity_in_stock": 40,
-    "price": 8,
-    "image": "image_url"
+    "price_naira": 8,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Toolbox",
     "quantity_in_stock": 15,
-    "price": 75,
-    "image": "image_url"
+    "price_naira": 75,
+    "image": null
   },
   {
     "category": "Tools",
     "name": "Work Light",
     "quantity_in_stock": 10,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Trash Cans",
     "quantity_in_stock": 20,
-    "price": 25,
-    "image": "image_url"
+    "price_naira": 25,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Recycling Bins",
     "quantity_in_stock": 15,
-    "price": 30,
-    "image": "image_url"
+    "price_naira": 30,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Alarm System",
     "quantity_in_stock": 5,
-    "price": 500,
-    "image": "image_url"
+    "price_naira": 500,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Thermostat",
     "quantity_in_stock": 8,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Humidifier",
     "quantity_in_stock": 10,
-    "price": 100,
-    "image": "image_url"
+    "price_naira": 100,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Dehumidifier",
     "quantity_in_stock": 8,
-    "price": 200,
-    "image": "image_url"
+    "price_naira": 200,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Air Purifier",
     "quantity_in_stock": 10,
-    "price": 250,
-    "image": "image_url"
+    "price_naira": 250,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Fan",
     "quantity_in_stock": 15,
-    "price": 50,
-    "image": "image_url"
+    "price_naira": 50,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Heater",
     "quantity_in_stock": 10,
-    "price": 150,
-    "image": "image_url"
+    "price_naira": 150,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Air Conditioner",
     "quantity_in_stock": 5,
-    "price": 500,
-    "image": "image_url"
+    "price_naira": 500,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Generator",
     "quantity_in_stock": 5,
-    "price": 1000,
-    "image": "image_url"
+    "price_naira": 1000,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Power Strip",
     "quantity_in_stock": 25,
-    "price": 20,
-    "image": "image_url"
+    "price_naira": 20,
+    "image": null
   },
   {
     "category": "Miscellaneous",
     "name": "Extension Cord",
     "quantity_in_stock": 30,
-    "price": 15,
-    "image": "image_url"
+    "price_naira": 15,
+    "image": null
   }
 ]

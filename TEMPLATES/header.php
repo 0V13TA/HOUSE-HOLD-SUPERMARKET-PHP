@@ -29,16 +29,9 @@ if (!isset($_SESSION['isLoggedIn'])) {
                 <?php else: ?>
                     <li><a href="http://localhost/php_projects/house-hold-supermarket/dashboard">Dashboard</a></li>
                     <li><a href="http://localhost/php_projects/house-hold-supermarket/authentication/logout.php">Logout</a></li>
+                    <li><a href="http://localhost/php_projects/house-hold-supermarket/products?category=all+products">Products</a></li>
                 <?php endif; ?>
                 <li><a href="http://localhost/php_projects/house-hold-supermarket/cart.php">Cart</a></li>
-                <li>
-                    <form action="search.php" method="get">
-                        <div class="input-group" style="display: flex; align-items: center;">
-                            <input class="input" type="search" name="search" placeholder="search" required>
-                            <button type="submit" class="btn btn-sm btn-danger" style="margin-left:10px;">Search</button>
-                        </div>
-                    </form>
-                </li>
             <?php endif; ?>
         </ul>
     </div>

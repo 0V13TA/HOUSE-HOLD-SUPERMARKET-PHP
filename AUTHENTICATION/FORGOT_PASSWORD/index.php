@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['resetPassword'])) {
         require '../../CONFIG/phpMailer.php';
         $myEmail = $_ENV['EMAIL_ADDRESS'];
         $verificationCode = rand(100000, 999999);
-        $mail->setFrom($myEmail, 'Your Name');
+        $mail->setFrom($myEmail, 'Omorogbe Vincentpaul');
         $mail->addAddress($email, $userData['username']);
         $mail->addReplyTo($myEmail, 'Your Name');
         $mail->isHTML(true);
